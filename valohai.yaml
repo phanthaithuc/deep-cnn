@@ -4,7 +4,11 @@
     
 
     parameters:
-    
+    - default: 1024
+      description: Maximum length of training input 
+      name: Max length
+      pass-as: --max_length 
+      type: integer    
     - default: 20
       description: Number of training epochs, default "20"
       name: Number of Epochs
