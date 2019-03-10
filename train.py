@@ -93,7 +93,7 @@ def train():
             shutil.rmtree(FLAGS.log_path)
         os.makedirs(FLAGS.log_path)
         if os.path.isdir(FLAGS.saved_path):
-            #shutil.rmtree(FLAGS.saved_path)
+        	shutil.rmtree(FLAGS.saved_path)
         os.makedirs(FLAGS.saved_path)
         outputs_dir = os.getenv('VH_OUTPUTS_DIR')
         output_files = os.path.join(outputs_dir, "log.txt", "w")
