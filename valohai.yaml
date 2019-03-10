@@ -1,0 +1,69 @@
+- step:
+    image: tensorflow/tensorflow:1.9.0-devel-gpu-py3
+    command: python train.py {parameters}
+    
+
+    parameters:
+    
+    - default: 20
+      description: Number of training epochs, default "20"
+      name: Number of Epochs
+      pass-as: --num_epochs {v}
+      type: integer
+    - default: 0.0005
+      description: Initial learning rate
+      name: Learning rate
+      pass-as: --lr {v}
+      type: float
+    - default: 128
+      description: Minibatch size, recommend default 128
+      name: Minibatch size
+      pass-as: --batch_size {v}
+      type: integer
+    - default: 3
+      description: Early stopping's parameter, set 0 to disable
+      name: Early stopping
+      pass-as: --es_patience {v}
+      type: integer
+    - default: 29
+      description: Depth of the network, optional "9, 17, 29 or 49" otherwise will crash
+      name: Depth
+      pass-as: --depth {v}
+      type: integer
+    - default: 0.9
+      description: Momentum, recommend default "0.9"
+      name: Momentum
+      pass-as: --momentum {v}
+      type: float
+    - default: data/train.csv
+      description: Path to train set
+      name: Train set 
+      pass-as: --train_set {v}
+      type: string
+    - default: data/test.csv
+      description: Path to test set
+      name: Test set 
+      pass-as: --train_set {v}
+      type: string
+    - default: trained_models
+      description: Path to save Trained Model
+      name: Output Trained Model 
+      pass-as: --saved_path {v}
+      type: string
+    
+    
+      
+    name: Train model
+
+
+- step:
+    command:
+    - pwd
+    - ls -la
+    - lshw
+    - nvidia-smi
+    - python --version
+    - nvcc --version | grep release
+    - cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
+    image: tensorflow/tensorflow:1.9.0-devel-gpu-py3
+    name: Worker environment check
