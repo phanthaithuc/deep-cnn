@@ -95,9 +95,6 @@ def train():
         if os.path.isdir(FLAGS.saved_path):
         	shutil.rmtree(FLAGS.saved_path)
         os.makedirs(FLAGS.saved_path)
-        outputs_dir = os.getenv('VH_OUTPUTS_DIR')
-        output_files = os.path.join(outputs_dir, "log.txt", "w")
-        np.savetxt(output_files, ws.eval(), delimiter=",")
         output_file = open(FLAGS.saved_path + os.sep + "logs.txt", "w")
         output_file.write("Model's parameters: {}".format(
             FLAGS.flag_values_dict()))
