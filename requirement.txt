@@ -1,2 +1,4 @@
-seaborn 
-tensorboard 
+tensorflow 
+pandas 
+scitkit-learn
+

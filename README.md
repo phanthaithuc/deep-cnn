@@ -18,7 +18,7 @@ Recommend reading list before start working with Valohai platform:
 
 3. Go to **Execution** tab, **Create Execution**, Valohai will read the _valohai.yaml_  and give you many options for **Parameters**
 
-4. Choose your preference paramters and start training. To train with another dataset, see **Training Dataset** below. 
+4. Choose your preference paramters and start training.
 
 5. To change **Docker image** or change running step, edit the _valohai.yaml_ file or choose another Docker image in **Image and Command** section on Valohai web interface. 
 
@@ -32,7 +32,7 @@ Recommend reading list before start working with Valohai platform:
     
     * If you have your dataset upload somewhere on the Internet, copy your direct link to _URL_ under **Input** section. Done 
     
-    * For more datasets, see **Training Dataset** below. The datasets come from the author of the paper, it's open and free to use. 
+For more datasets, see **Training Dataset** below. The datasets come from the author of the paper, it's open and free to use. 
     
 
 
@@ -46,9 +46,11 @@ Recommend reading list before start working with Valohai platform:
    
 3. Run this Project with your chosen Paramters: 
 
-    > python train.py --lr learning_rate  --num_epochs number of epochs 
+    python train.py --lr  _learning_rate_  --num_epochs  _number of epochs_  --batch_size _batch size_
     
-    >For example: python train --lr 0.005  --num_epochs 10 --batch_size 64
+    For example: 
+
+    > python train --lr 0.005  --num_epochs 10 --batch_size 128
     
     Read train.py for more preference parameters 
 
@@ -78,6 +80,5 @@ Dataset Overview:
 | Yahoo! Answers         |    10   |   1 400 000   |    60 000    |
 | Amazon Review Full     |    5    |   3 000 000   |    650 000   |
 | Amazon Review Polarity |    2    |   3 600 000   |    400 000   |
-
 
 
