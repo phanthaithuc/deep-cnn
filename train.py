@@ -92,9 +92,9 @@ def train():
         if os.path.isdir(FLAGS.log_path):
             shutil.rmtree(FLAGS.log_path)
         os.makedirs(FLAGS.log_path)
-        if os.path.isdir(FLAGS.saved_path):
-        	shutil.rmtree(FLAGS.saved_path)
-        os.makedirs(FLAGS.saved_path)
+        #if os.path.isdir(FLAGS.saved_path):
+        	#shutil.rmtree(FLAGS.saved_path)
+        #os.makedirs(FLAGS.saved_path)
         output_file = open(FLAGS.saved_path + os.sep + "logs.txt", "w")
         output_file.write("Model's parameters: {}".format(
             FLAGS.flag_values_dict()))
