@@ -4,9 +4,9 @@
     
     inputs:
       - name: train-set
-        default: data/train.csv
+        default: https://phanthai.blob.core.windows.net/dataset/train.csv
       - name: test-set
-        default: data/test.csv 
+        default: https://phanthai.blob.core.windows.net/dataset/test.csv
         
         
     parameters:
@@ -45,7 +45,7 @@
       name: Momentum
       pass-as: --momentum {v}
       type: float
-    - default: /valohai/inputs/training-set/train.csv
+    - default: /valohai/inputs/train-set/train.csv
       description: Path to train set
       name: Train set 
       pass-as: --train_set {v}
@@ -55,7 +55,7 @@
       name: Test set 
       pass-as: --train_set {v}
       type: string
-    - default: trained_models
+    - default: valohai/outputs/trained-model
       description: Path to save Trained Model
       name: Output Trained Model 
       pass-as: --saved_path {v}
