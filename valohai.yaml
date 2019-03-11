@@ -4,9 +4,9 @@
     
     inputs:
       - name: train-set
-        default: https://phanthai.blob.core.windows.net/dataset/train.csv
+        default: https://phanthai.blob.core.windows.net/agdataset/train.csv
       - name: test-set
-        default: https://phanthai.blob.core.windows.net/dataset/test.csv
+        default: https://phanthai.blob.core.windows.net/agdataset/test.csv
         
         
     parameters:
