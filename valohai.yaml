@@ -2,7 +2,13 @@
     image: tensorflow/tensorflow:1.9.0-devel-gpu-py3
     command: python train.py {parameters}
     
-
+    inputs:
+      - name: train-set
+        default: /valohai/input
+      - name: test-set
+        default: /valohai/input 
+        
+        
     parameters:
     - default: 1024
       description: Maximum length of training input 
