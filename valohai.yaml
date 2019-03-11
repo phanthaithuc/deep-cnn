@@ -4,9 +4,9 @@
     
     inputs:
       - name: train-set
-        default: /valohai/input
+        default: data/train.csv
       - name: test-set
-        default: /valohai/input 
+        default: data/test.csv 
         
         
     parameters:
@@ -45,12 +45,12 @@
       name: Momentum
       pass-as: --momentum {v}
       type: float
-    - default: data/train.csv
+    - default: /valohai/inputs/training-set/train.csv
       description: Path to train set
       name: Train set 
       pass-as: --train_set {v}
       type: string
-    - default: data/test.csv
+    - default: /valohai/inputs/test-set/test.csv
       description: Path to test set
       name: Test set 
       pass-as: --train_set {v}
