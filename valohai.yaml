@@ -70,6 +70,13 @@
       name: Output Trained Model 
       pass-as: --saved_path {v}
       type: string
+      
+    - default: /valohai/outputs/tensorboard
+      description: Path to save Tensorboard grapth
+      name: Tensorboard Path
+      pass-as: --log_path {v}
+      type: string
+      
     
     
     name: Train model
