@@ -4,9 +4,10 @@
     
     inputs:
       - name: train-set
-        default: https://phanthai.blob.core.windows.net/agdataset/train.csv
+        default: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/AG/train.csv
       - name: test-set
-        default: https://phanthai.blob.core.windows.net/agdataset/test.csv
+        default: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/AG/test.csv
+
         
         
     parameters:
@@ -81,15 +82,3 @@
     
     name: Train model
 
-
-- step:
-    command:
-    - pwd
-    - ls -la
-    - lshw
-    - nvidia-smi
-    - python --version
-    - nvcc --version | grep release
-    - cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
-    image: tensorflow/tensorflow:1.9.0-devel-gpu-py3
-    name: Worker environment check
