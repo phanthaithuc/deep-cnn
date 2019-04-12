@@ -83,17 +83,18 @@ Dataset Overview:
 
 Dataset direct link for Valohai platform:
 
-    * AG's News Dataset 
+    * Yelp Review News Dataset 
     
-        * Train-set: https://phanthai.blob.core.windows.net/agdataset/train.csv
-        * Test-set:  https://phanthai.blob.core.windows.net/agdataset/test.csv
+        * Train-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yelp-review/train.csv
+        * Test-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yelp-review/test.csv
         
-    * Amazon Review Polarity
+    * Amazon Review:
         
-        * Train-set: https://phanthai.blob.core.windows.net/dataset/train.csv
-        * Test-set: https://phanthai.blob.core.windows.net/dataset/test.csv
+        * Train-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Amazon-full/train.csv
+        * Test-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Amazon-full/test.csv
         
     * Yahoo! Answers: 
     
-        * Train-set: https://phanthai.blob.core.windows.net/yahoodata/train.csv 
-        * Test-set: https://phanthai.blob.core.windows.net/yahoodata/test.csv
+        * Train-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yahoo-answer/train.csv
+        * Test-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yahoo-answer/test.csv
+  
