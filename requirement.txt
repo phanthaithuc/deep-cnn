@@ -1,4 +1,5 @@
 tensorflow 
 pandas 
 scitkit-learn
+tensorboardX
 
