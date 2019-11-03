@@ -30,7 +30,7 @@
       pass-as: --batch_size {v}
       type: integer
       
-    - default: 3
+    - default: 5
       description: Early stopping's parameter, set 0 to disable
       name: Early stopping
       pass-as: --es_patience {v}
