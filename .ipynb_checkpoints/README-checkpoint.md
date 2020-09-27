@@ -65,9 +65,11 @@ For more datasets, see **Training Dataset** below. The datasets which come from 
 
     
 
-## Machine learning model Version control with Valohai**
+## Machine learning model Version control with Valohai
+### Valohai overview
+![graph](results/valohai_g.png)
 
-    * **Valohai store the metada of num_epoch, learning_rate, ... all parameters for each train and save the meta data with exported model**
+    *Valohai store the metada of num_epoch, learning_rate, ... all parameters for each train and save the meta data with exported model
     
 ![valohai](results/valohai.png)
     
