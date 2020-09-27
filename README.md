@@ -64,37 +64,53 @@ For more datasets, see **Training Dataset** below. The datasets which come from 
     
 
     
-### Training Dataset
 
-You can download  different datasets that can be used for training this model from the following: [LINK](https://drive.google.com/drive/u/0/folders/0Bz8a_Dbh9Qhbfll6bVpmNUtUcFdjYmF2SEpmZUZUcVNiMUw1TWN6RDV3a0JHT3kxLVhVR2M). 
+## Machine learning model Version control with Valohai**
 
-Dataset Overview: 
-
-| Dataset                | Classes | Train samples | Test samples |
-|------------------------|:---------:|:---------------:|:--------------:|
-| AG’s News              |    4    |    120 000    |     7 600    |
-| Sogou News (Chinese)           |    5    |    450 000    |    60 000    |
-| DBPedia                |    14   |    560 000    |    70 000    |
-| Yelp Review Polarity   |    2    |    560 000    |    38 000    |
-| Yelp Review Full       |    5    |    650 000    |    50 000    |
-| Yahoo! Answers         |    10   |   1 400 000   |    60 000    |
-| Amazon Review Full     |    5    |   3 000 000   |    650 000   |
-| Amazon Review Polarity |    2    |   3 600 000   |    400 000   |
-
-Dataset direct link for Valohai platform:
-
-    * Yelp Review News Dataset 
+    * **Valohai store the metada of num_epoch, learning_rate, ... all parameters for each train and save the meta data with exported model**
     
-        * Train-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yelp-review/train.csv
-        * Test-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yelp-review/test.csv
-        
-    * Amazon Review:
-        
-        * Train-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Amazon-full/train.csv
-        * Test-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Amazon-full/test.csv
-        
-    * Yahoo! Answers: 
+![valohai](results/valohai.png)
     
-        * Train-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yahoo-answer/train.csv
-        * Test-set: swift://f8a5dbc8033343aea820c139245afe13/Arcada-data/Text-Classification-datasets/Yahoo-answer/test.csv
-  
+    
+ ## Result
+
+|     Depth     |       9      |       17     |       29     |       49     |
+|:---------------:|:--------------:|:--------------:|:--------------:|:--------------:|
+|    ag_news    | 87.67(90.17) | 88.09(90.61) | 88.01(91.33) |    84.71     |
+|   sogu_news   | 95.67(96.42) | 95.89(96.49) | 95.73(96.82) |    95.35     |
+|    db_pedia   | 98.33(98.44) | 98.28(98.39) | 98.07(98.59) |    97.38     |
+| yelp_polarity | 94.57(94.73) | 95.20(94.95) | 94.95(95.37) |    95.08     |
+|  yelp_review  | 62.44(61.96) | 63.44(62.59) | 62.70(63.00) |    62.83     |
+|  yahoo_answer | 69.57(71.76) | 70.03(71.75) | 70.34(72.84) |    69.16     |
+| amazon_review | 60.34(60.81) | 60.98(61.19) | 60.67(61.61) |    59.80     |
+|amazon_polarity| 94.30(94.31) | 94.60(94.57) | 94.53(95.06) |    94.10     |
+
+Below are the training/test loss/accuracy curves for each dataset's experiments (figures for 9, 17, 29-layer model are from left to right) :
+
+- **ag_news**
+
+<img src="results/ag_news_depth_9.png" width="280"> <img src="results/ag_news_depth_17.png" width="280"> <img src="results/ag_news_depth_29.png" width="280"> 
+
+- **sogou_news**
+
+<img src="results/sogou_news_depth_9.png" width="280"> <img src="results/sogou_news_depth_17.png" width="280"> <img src="results/sogou_news_depth_29.png" width="280">
+
+- **db_pedia**
+
+<img src="results/dbpedia_depth_9.png" width="280"> <img src="results/dbpedia_depth_17.png" width="280"> <img src="results/dbpedia_depth_29.png" width="280"> 
+
+- **yelp_polarity**
+
+<img src="results/yelp_review_polarity_depth_9.png" width="280"> <img src="results/yelp_review_polarity_depth_17.png" width="280"> <img src="results/yelp_review_polarity_depth_29.png" width="280"> 
+
+- **yelp_review**
+
+<img src="results/yelp_review_full_depth_9.png" width="280"> <img src="results/yelp_review_full_depth_17.png" width="280"> <img src="results/yelp_review_full_depth_29.png" width="280"> 
+
+- **amazon_review**
+
+<img src="results/amazon_review_full_depth_9.png" width="280"> <img src="results/amazon_review_full_depth_17.png" width="280"> <img src="results/amazon_review_full_depth_29.png" width="280"> 
+
+- **amazon_polarity**
+
+<img src="results/amazon_review_polarity_depth_9.png" width="280"> <img src="results/amazon_review_polarity_depth_17.png" width="280"> <img src="results/amazon_review_polarity_depth_29.png" width="280"> 
